@@ -23,5 +23,5 @@ const loadContent = (url, targetId) => {
 
 
 // Load shared header and footer
-loadContent('../shared/header.html', 'header-content');
-loadContent('../shared/footer.html', 'footer-content');
+loadContent('shared/header.html', 'header-content');
+loadContent('shared/footer.html', 'footer-content');
