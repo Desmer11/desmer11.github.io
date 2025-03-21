@@ -30,7 +30,7 @@ loadContent('shared/header.html', 'header-container', () => {
     if (toggleButton && navBar) {
         toggleButton.addEventListener("click", function () {
             navBar.classList.toggle("active");
-            toggleButton.classList.toggle("active"); // Add/remove "active" class for animation
+            toggleButton.classList.toggle("active");
         });
     } else {
         console.error("Dropdown toggle button or navigation bar not found.");
