@@ -1,29 +1,29 @@
-const loadContent = (url, targetId, callback) => {
-    const targetElement = document.getElementById(targetId);
+// const loadContent = (url, targetId, callback) => {
+//     const targetElement = document.getElementById(targetId);
 
-    if (targetElement) {
-        fetch(url)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Failed to load: ${url}, status: ${response.status}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                targetElement.innerHTML = data;
-                console.log(`Content loaded into: ${targetId}`);
-                if (callback) callback(); // Call the callback after content is loaded
-            })
-            .catch(error => {
-                console.error('Error loading content:', error);
-            });
-    } else {
-        console.warn(`Target element with ID "${targetId}" not found.`);
-    }
-};
+//     if (targetElement) {
+//         fetch(url)
+//             .then(response => {
+//                 if (!response.ok) {
+//                     throw new Error(`Failed to load: ${url}, status: ${response.status}`);
+//                 }
+//                 return response.text();
+//             })
+//             .then(data => {
+//                 targetElement.innerHTML = data;
+//                 console.log(`Content loaded into: ${targetId}`);
+//                 if (callback) callback(); // Call the callback after content is loaded
+//             })
+//             .catch(error => {
+//                 console.error('Error loading content:', error);
+//             });
+//     } else {
+//         console.warn(`Target element with ID "${targetId}" not found.`);
+//     }
+// };
 
 // Load shared header and footer, then initialize toggle
-loadContent('header.html', 'header-container', () => {
+// loadContent('header.html', 'header-container', () => {
     const toggleButton = document.querySelector(".dropdown-toggle");
     const navBar = document.querySelector(".nav-bar");
 
@@ -35,6 +35,6 @@ loadContent('header.html', 'header-container', () => {
     } else {
         console.error("Dropdown toggle button or navigation bar not found.");
     }
-});
+// });
 
-loadContent('footer.html', 'footer-container');
+// loadContent('footer.html', 'footer-container');
