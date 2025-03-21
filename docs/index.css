@@ -58,3 +58,554 @@ body {
 }
 
 
+
+/* Layout skeleton */
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Main Elements */
+html, body {
+    --e-global-color-primary: #006680;
+    --e-global-color-secondary: #54595F;
+    --e-global-color-text: #7A7A7A;
+    --e-global-color-accent: #006680;
+    --e-global-color-4f90d1c6: #6EC1E4;
+    --e-global-color-60b5bb8d: #61CE70;
+    --e-global-color-5a86ad4f: #4054B2;
+    --e-global-color-83fd2a: #23A455;
+    --e-global-color-14cdbdac: #000;
+    --e-global-color-54458148: #FFF;
+    --e-global-color-1f418765: #F0F3F6;
+    --e-global-typography-primary-font-family: "Barlow Condensed";
+    --e-global-typography-primary-font-weight: 600;
+    --e-global-typography-secondary-font-family: "Barlow Condensed";
+    --e-global-typography-secondary-font-weight: 400;
+    --e-global-typography-text-font-family: "Barlow";
+    --e-global-typography-text-font-size: 18px;
+    --e-global-typography-text-font-weight: 300;
+    --e-global-typography-accent-font-family: "Barlow Condensed";
+    --e-global-typography-accent-font-weight: 500;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.6em;
+    height: 100%; /* Ensure full viewport height */
+    width: 100wv;
+    margin: 0; /* Remove default margins */
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Layout */
+
+
+
+/* Header Styling */
+#header {
+    margin-top: 0;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 2px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    /* opacity: 0.9;  */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100vw; /* Centered container */
+    margin: 0 auto;
+    padding: 0 20px; /* Padding for small screens */
+}
+
+/* Logo Section */
+.logo-section {
+    width: 20vw;
+    height: 50px;
+    margin-left: 0vw;
+    display: flex;
+    align-items: left;
+
+    gap: 15px;
+}
+
+.logo {
+    width: 20vw;
+    height: 50px;
+    border-radius: 50%; 
+    object-fit: cover;
+}
+
+/* .firm-name {
+    font-size: 1.0rem;
+    font-weight: bold;
+    color: #000000; 
+    margin: 0;
+} */
+
+/* Navigation Bar */
+.nav-bar {
+    height: 50px;
+    line-height: 50px;
+}
+.nav-bar .nav-items {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar .nav-items li {
+    display: inline;
+}
+
+.nav-bar .nav-items a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-bar .nav-items a:hover {
+    color: #73c5ff; /* Highlight color on hover */
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    background-color: #73c5ff; 
+
+    margin-right: 0vw;
+    width: 20vw;
+    height: 50px;
+  
+    color: #ffffff; 
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #73c5ff; 
+    transform: scale(0.90); /* Slight zoom effect */
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+/* Hide the dropdown toggle by default */
+.dropdown-toggle {
+    display: none;
+}
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>< */
+
+/* Footer styles */
+#footer {
+    margin-left: auto;
+    width: 100vw;
+    height: auto;
+    background-color: #000;
+    text-align: center;
+    box-sizing: border-box; 
+    transition: background-color 0.3s; /* Add transition here */
+}
+
+#footer:hover {
+    background-color: black; /* Change to black or any other color */
+}
+
+#footer .footer-items {
+    flex: 1; 
+    background-color: #73c5ff;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 20px; 
+    text-align: center; 
+    color: #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s; /* Add transition here */
+}
+
+#footer .footer-items:hover {
+    background-color: #ff6347; /* New background color on hover */
+}
+
+#footer .footer-container {
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: space-around; /* Spread items evenly */
+    align-items: center; /* Vertically align items */
+    max-width: 100vw;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    height: auto; /* Ensure content height doesn't stretch */
+   
+    
+   
+}
+
+#footer .footer-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+
+    
+}
+
+    #footer .footer-links a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    #footer .footer-links p {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+
+#footer .footer-items {
+    flex: 1; 
+    background-color: #73c5ff;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 20px; /* Internal padding for content */
+    text-align: center; /* Center the text */
+    color: #000000; /* Text color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+
+#footer .social-icons {
+    align-items: center;
+    gap: 20px;
+}
+
+    #footer .social-icons #contact-txt {
+        color: #fff;
+        font-size: 16px;
+        position: relative;
+        /* top: 30%; */
+    }
+
+    #footer .social-icons a {
+        color: #fff;
+        text-decoration: none;
+        transition: transform 0.3s;
+    }
+
+        #footer .social-icons a i {
+            font-size: 24px;
+        }
+
+        #footer .social-icons a img {
+            width: 24px; /* Keep the image width smaller */
+            height: 24px; /* Maintain square proportions */
+            object-fit: contain; /* Ensure the image fits properly without distortion */
+        }
+
+        #footer .social-icons a:hover {
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+
+        .tlf {
+            position: fixed; 
+            bottom: 0px; 
+            width: 100vw;
+            height: 50px;
+            line-height: 10px;
+
+            background-color: #73c5ff; 
+            color: #ffffff;
+            text-align: center; 
+            padding: 0px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+            z-index: 999; 
+
+
+            border: 2px solid #fff;
+            border-radius: 8px;
+            /* opacity: 0.9; */
+           
+
+        }
+
+        .tlf a {
+            text-decoration: none;
+
+        }
+    
+        #footer .footer-links a,
+        #footer .social-icons a,
+        .tlf a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: transform 0.3s, background-color 0.3s; /* Add transition here */
+        }
+        
+        #footer .social-icons a:hover,
+        .tlf a:hover {
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+        
+
+            
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* Media Queries for Phones */
+@media only screen and (max-width: 768px) {
+
+    html,
+    body {
+        font-size: 18px;
+    }
+
+    /* Header adjustments */
+    #header {
+        padding: 8px 0;
+    }
+
+    .header-container {
+
+        align-items: center;
+        padding: 0 10px;
+    }
+    .logo-section {
+        width: 25vw;
+        height: 50px;
+        margin-left: 0vw;
+        display: flex;
+        align-items: left;
+    
+        gap: 15px;
+    }
+    .logo {
+        /* width: 100px; */
+        /* margin-right: 5px; */
+        /* height: auto; */
+        
+    }
+
+    .nav-bar .nav-items {
+        flex-direction: column;
+        gap: 5px;
+        align-items: left;
+        margin-top: 50px;
+        margin-left: 20px;
+    }
+
+    .nav-bar .nav-items a {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+
+        margin-right: 0vw;
+        width: 20vw;
+        height: 50px;
+
+        padding: 8px 16px;
+        font-size: 0.9rem;
+
+    }
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>  Dropdown-toggle */
+/* Dropdown menu hidden by default */
+.nav-bar {
+    position: absolute;
+    top: 0px; 
+    left: -100%; 
+    width: 35%; 
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+    transition: left 0.4s ease; /* Smooth slide-in effect */
+
+    
+
+}
+
+/* Show the menu when active */
+.nav-bar.active {
+    /* Slide into view */
+    left: 0px; 
+}
+
+
+/* Dropdown toggle button */
+.dropdown-toggle {
+    margin-right: 5vw;
+    height: 25px;
+    line-height: 50px;
+    width: 40px; 
+    text-align: right;
+    background-color: #73c5ff;
+
+    position: relative;
+    color: #000;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.dropdown-toggle span {
+    background-color: #000;
+    position: absolute;
+    width: 100%;
+    height: .154em; /* Adjust thickness of the bars */
+    transition: all 0.3s ease;
+}
+
+/* Adjust positions for the three bars */
+.dropdown-toggle span:nth-child(1) {
+    top: 0; /* Top bar */
+}
+
+.dropdown-toggle span:nth-child(2) {
+    top: 50%; /* Middle bar */
+    transform: translateY(-50%);
+}
+
+.dropdown-toggle span:nth-child(3) {
+    bottom: 0; /* Bottom bar */
+}
+
+/* Transform into a "cross" when active */
+.dropdown-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.dropdown-toggle.active span:nth-child(2) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+.dropdown-toggle.active span:nth-child(3) {
+    opacity: 0; /* Hide the middle bar */
+}
+
+.cta-button {
+    background-color: #73c5ff; 
+    
+    margin-right: 5vw;
+    width: 25vw;
+    height: 50px;
+    color: #ffffff; 
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.7rem;
+    text-align: left;
+
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    /* display: none; */
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>> */
+
+
+
+
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>FOOTER */
+
+    #footer {
+        padding: 5px 0;
+        text-align: center;
+        background-color: none;
+        margin-top: 20px; 
+    }
+
+    #footer .footer-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    #footer .footer-items {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    #footer .footer-links {
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+
+    #footer .footer-links a {
+        font-size: 14px;
+
+    }
+
+    #footer .social-icons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 5px;
+
+    }
+
+    #footer .social-icons a i,
+    #footer .social-icons a img {
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+
+    }
+
+
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> MAIN CONTENT */
+
+    .wrapper {
+        flex-direction: column;
+        min-height: 800px;
+        width: 100vw;
+        height: 800px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    
+    }
+
+    #background {
+        height: 80px;
+        padding: 0 0 0 0;
+        flex: none;
+    }
+
+    .elementor-background-video-hosted {
+        height: 800px;
+        /* Reduce video height for smaller screens */
+    }
+
+    #main-content {
+
+    
+        padding: 5px;
+  
+        box-sizing: border-box; 
+    }
+
+    #main-text {
+        padding: 10px;
+        /* Smaller padding for smaller screens */
+        font-size: 16px;
+        /* Adjust font size */
+        width: 90%;
+        /* Fit content within 90% of the screen */
+    }
+}
